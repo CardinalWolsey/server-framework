@@ -5,14 +5,14 @@ var myRouter = new Router();
 
 //<d:route to return awesome>
 myRouter.get('/awesome', function(req, res) {
-  //<i:it should write a head>
+  //<i:[res]it should write a head>
   res.writeHead(
     //<e:status=>
     200,
     //<e:Content-Type=>
     {'Content-Type':'text/plain'});
   //<:i>
-  //<i:it should write a head>
+  //<i:[err]it should equal null>
   res.writeHead(
     //<e:status=>
     200,
