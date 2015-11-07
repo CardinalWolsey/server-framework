@@ -26,6 +26,21 @@ function populateDescribeList(opens, closes){
 }
 
 //calls sweepDescribes --> populateDescribeList
-sweepDescribes(source, populateDescribeList);console.log(describeList[1]);
+sweepDescribes(source, populateDescribeList);
+
+//TODO: FINISH IT/EXPECT BLOCKS
+
+//TODO: FUNCTION TO TAKE OUTPUT AND WRITE TO TEST FILE
+  //WOULD NEED TO NOT OVERWRITE OTHER FILES IN TEST DIR
+  //WOULD NEED TO TAKE THE LIST OF DESCRIBES (OBJECTS), USE THE PROPERTIES TO CREATE A STRING REPRESENTING THE TEST BLOCK(S)
+  //WRITE TO BUFFER/STREAM (?)
+  //SAVE BUFFER TO FILE
+
+//TODO: TESTING AND TRAVIS CI
+
+//TODO: DOCUMENTATION
+
+
+console.log(describeList[1]);
 
 
