@@ -26,7 +26,6 @@ function populateDescribeList(opens, closes){
 }
 
 //calls sweepDescribes --> populateDescribeList
-sweepDescribes(source, populateDescribeList);
-console.log(describeList[0]);
+sweepDescribes(source, populateDescribeList);console.log(describeList[1]);
 
 

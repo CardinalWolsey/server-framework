@@ -14,10 +14,29 @@ myRouter.get('/awesome', function(req, res) {
   //<:i>
   //<i:[err]it should equal null>
   res.writeHead(
-    //<e:status=>
+    //<e:err=>null
     200,
-    //<e:Content-Type=>
     {'Content-Type':'text/plain'});
+  //<:i>
+  res.write('wow, such an awesome router');
+  res.end();
+});
+//<:d>
+
+//<d:route to return sweeeeet>
+myRouter.get('/awesome', function(req, res) {
+  //<i:[res]it should write a head>
+  res.writeHead(
+    //<e:status=>
+    400,
+    //<e:Content-Type=>
+    {'Content-Type':'text/html'});
+  //<:i>
+  //<i:[err]it should equal null>
+  res.writeHead(
+    //<e:err=>null
+    300,
+    {'Content-Type':'text/html'});
   //<:i>
   res.write('wow, such an awesome router');
   res.end();
