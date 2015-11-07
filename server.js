@@ -17,14 +17,13 @@ myRouter.get('/awesome', function(req, res) {
 });
 //<:d>
 
-//<d:route to return awesome>
+//<d:[GET]route to return awesome>
 myRouter.get('/awesome', function(req, res) {
   res.writeHead(
-    //<i: it should have a status [status =]>
+    //<i: should have a [status][=]>
     400, //<:i>
-    //<i: it should have a content-type [content-type =]
+    //<i: should have a [Content-Type][=]>
     {'Content-Type':'text/html'}); //<:i>
-  res.writeHead(
   res.write('wow, such an awesome router');
   res.end();
 });
