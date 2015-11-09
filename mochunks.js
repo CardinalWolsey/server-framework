@@ -3,18 +3,21 @@ var matches = require(__dirname + '/lib/getMatches.js');
 var describe = require(__dirname + '/lib/describe.js');
 var fs = require('fs');
 var source = fs.readFileSync('./server.js', 'utf8');
+
 var dOpen = /<d:/g;
 var dClose =  /<:d>/g;
 var iOpen = /<i:/g;
 var iClose = /<:i>/g;
+
 var describeList = [];
 
 //goes through the source file to find describe blocks
 function sweepDescribes(file, cb){
-  var openDescribes = matches.matches(0, source.length-1, dOpen, source);
-  var closeDescribes = matches.matches(0, source.length-1, dClose, source);
+  var openDescribes = matches.matches(0, file.length-1, dOpen, file);
+  var closeDescribes = matches.matches(0, file.length-1, dClose, file);
   //callback --> populateDescribeList
-  cb(openDescribes, closeDescribes)
+  cb(openDescribes, closeDescribes);
+  debugger;
 }
 
 //instantiates a describe block object for each block
@@ -22,7 +25,9 @@ function populateDescribeList(opens, closes){
   for(var c=0; c<opens.length; c++){
     var myDescribe = describe.getDescribes(source, opens[c], closes[c]);
      describeList.push(myDescribe);
-  };
+  }
+  debugger;
+  return describeList;
 }
 
 //calls sweepDescribes --> populateDescribeList
